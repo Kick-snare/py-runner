@@ -3,27 +3,28 @@ import sys
 import os
 import shutil
 
-base_dir = '/Users/yoojunhong/Desktop/'
-file_list = os.listdir(base_dir)
+base_dir = '/Users/yoojunhong/Desktop/assignment/'
+file_list = sorted(os.listdir(base_dir))
 assign_list = list(filter(lambda str : '컴퓨터및프로그래밍입문' in str, file_list))
 
 print ("Select the directory to excute")
+
 for i in range(len(assign_list)):
-    print(i, ':', assign_list[i][42::])
+    print(i, '\t:', assign_list[i][42::])
 
 curr_dir = base_dir
 
 while True:
     try:
-        curr_dir += assign_list[int(input())]
+        curr_dir += assign_list[int(input('> '))]
         break
     except IndexError as e:
         print("Invalid Number!")
 
 testcase = ['' for i in range(10)]
-# testcase[0] = ''
-# testcase[1] = ''
-# testcase[2] = ''
+testcase[0] = '23\n48\n59\n2515'
+testcase[1] = '2000'
+testcase[2] = '2885'
 # testcase[3] = ''
 # testcase[4] = ''
 
@@ -38,7 +39,7 @@ for dirName in dirNameList:
     studentName = dirName.split('-')[0]
     print("⇩ ", studentName)
 
-    pyfiles = list(filter(lambda str : str.endswith(".py"), os.listdir(curr_dir + '/' + dirName)))
+    pyfiles = sorted(list(filter(lambda str : str.endswith(".py"), os.listdir(curr_dir + '/' + dirName))))
     flag = False
 
     for idx, fileName in enumerate(pyfiles):
