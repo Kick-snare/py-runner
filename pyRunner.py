@@ -4,8 +4,8 @@ import os
 import shutil
  
 testcase = ['' for i in range(10)]
-testcase[0] = '홍유준\n부산광역시 연제구 연산2동\n123\n1234'
-testcase[1] = '48\n5\n120'
+# testcase[0] = ''
+# testcase[1] = ''
 # testcase[2] = ''
 # testcase[3] = ''
 # testcase[4] = ''
