@@ -32,7 +32,7 @@ for dirName in dirNameList:
     for idx, fileName in enumerate(pyfiles):
         if len(fileName)==0:
             continue
-        print(" >", fileName.split('/')[1])
+        print("  >", fileName.split('/')[1])
         flag = True
  
         with open('./_Results/0'+str(idx+1)+'_'+studentName+'.txt', "a", encoding='utf-8') as result:
